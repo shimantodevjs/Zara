@@ -38,16 +38,17 @@
            object-fit: contain;
            margin-left: 180px;
            width: 1000px;
+           height: calc(100vh - 80px);
         }
     }
 
         .slick-prev,
         .slick-next {
             position: absolute;
-            top: 75%;
+            top: 50%;
             z-index: 1;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.9);
             width: 30px;
             height: 30px;
             display: flex;
@@ -62,11 +63,11 @@
             }
     
             &.slick-prev {
-                left: 47%;
+                left: 5%;
             }
     
             &.slick-next {
-                right: 47%;
+                right: 5%;
             }
         }
     
