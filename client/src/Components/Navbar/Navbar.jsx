@@ -1,19 +1,21 @@
-import React from 'react'
 import { KeyboardArrowDown,
          Search,
          PersonOutline,
          FavoriteBorder,
-         ShoppingCartOutlined
+         ShoppingCartOutlined,
         } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import './Navbar.scss'
 
 const Navbar = () => {
+
+
+
   return (
     <div className='navbar'>
       <div className="wrapper">
-        <div className="left">
 
+         <div className="left">
           <div className="item">
             <img src="/img/en.png" alt="" />
             <KeyboardArrowDown />
@@ -35,12 +37,13 @@ const Navbar = () => {
           <div className="item">
             <Link to='/products/3' className='link'>Children</Link>
           </div>
+       
         </div>
 
         <div className="center">
           <Link to='/' className='link'>ZARA</Link>
         </div>
-
+   
         <div className="right">
            <div className="icons">
              <Search />
@@ -52,8 +55,10 @@ const Navbar = () => {
              </div>
            </div>
         </div>
-      </div>
-    </div>
+
+       </div>
+
+       </div>
   )
 }
 

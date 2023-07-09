@@ -6,6 +6,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #fff;
+        color: #000;
 
         .item{
             display: flex;
@@ -56,5 +58,8 @@
                 }
             }
         }
-    }
+     }
 }
+
+
+

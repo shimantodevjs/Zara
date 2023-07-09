@@ -9,6 +9,8 @@ import Product from "./pages/Product/Product";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import './App.scss'
+
+
 const Layout=()=>{
 return(
   <div className="app">
