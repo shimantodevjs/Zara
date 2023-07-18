@@ -15,6 +15,7 @@
             padding: 10px;
             border: none;
             border-radius: 5px 0 0 5px;
+            outline: none;
         }
 
         button{
@@ -29,6 +30,20 @@
         .icons{
             display: flex;
             gap: 10px;
+        }
+    }
+
+    @media (max-width:1024px) {
+        .wrapper{
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width:767px) {
+        .wrapper{
+            width: 70%;
         }
     }
 }

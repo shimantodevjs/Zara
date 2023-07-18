@@ -1,8 +1,12 @@
 .categories{
-     display: flex;
-     height: 80vh;
-     gap: 10px;
-     margin: 10px;
+     
+
+     .wrapper{
+
+            display: flex;
+            height: 80vh;
+            gap: 10px;
+            margin: 10px;
 
      .col{
         flex: 1;
@@ -56,4 +60,6 @@
             object-fit: cover;
         }
      }
+    }
+
 }

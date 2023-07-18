@@ -33,19 +33,22 @@ const settings = {
 };
 
   return (
+    <div className="imgSliderWrapper">
     <div className='slider'>
-      <div className="container">
-        </div>
+    
+      <div className="background"> </div>
+        
      <Slider {...settings}>
         {imgData.map((imgUrl, index) => {
   return (
-    <div key={index} className='imageContainer'>
+    <div key={index} >
       <img src={imgUrl} alt={`Image ${index + 1}`} />
     </div>
   );
 })}
      </Slider>
-     
+      
+    </div>
     </div>
   )
 }
