@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "./FeaturedProducts.scss"
 import Card from '../Card/Card'
 
@@ -44,6 +44,8 @@ const FeaturedProducts = ({type}) => {
      },
 
   ]
+
+  
 
   return (
     <div className='featuredProducts'>

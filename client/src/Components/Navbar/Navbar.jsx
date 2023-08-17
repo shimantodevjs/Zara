@@ -1,4 +1,4 @@
-import { useState , useEffect } from 'react';
+import { useState} from 'react';
 import { KeyboardArrowDown,
          Search,
          PersonOutline,
@@ -9,30 +9,21 @@ import { KeyboardArrowDown,
         } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import './Navbar.scss'
+import Cart from '../Cart/Cart';
 
 const Navbar = () => {
 
 const [menuOpen , setMenuOpen] = useState(false)
 
-useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 1023) { // Set the breakpoint for mobile and tablet devices
-        setMenuOpen(false); // Close the menu on resize if the screen width is below or equal to the breakpoint
-      }
-    };
-
-    // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+const [cartOpen , setCartOpen] = useState(false)
 
 const menuToggle = () => {
     setMenuOpen(!menuOpen);
   };
+
+const cartToggle = () =>{
+  setCartOpen(!cartOpen)
+}
 
   return (
     <div className='navbar'>
@@ -80,14 +71,15 @@ const menuToggle = () => {
              <Search />
              <PersonOutline />
              <FavoriteBorder />
-             <div className="cart">
+             <div className="cart" onClick={cartToggle}>
               <ShoppingCartOutlined />
-              <span>0</span>
+              <span>2</span>
              </div>
            </div>
         </div>
 
        </div>
+       {cartOpen && <Cart />}
 
        </div>
   )
