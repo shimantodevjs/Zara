@@ -1,3 +1,3 @@
 # zaradesign
 
-Demo: http://zarashimantodevjs.surge.sh/
+Demo: http://zara-shimantodevjs.surge.sh/
