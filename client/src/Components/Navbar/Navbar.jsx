@@ -10,8 +10,17 @@ import { KeyboardArrowDown,
 import { Link } from 'react-router-dom';
 import './Navbar.scss'
 import Cart from '../Cart/Cart';
+import { useSelector, useDispatch } from 'react-redux';
+import {setSelectedGender} from '../../Redux/genderSlice'
 
 const Navbar = () => {
+
+const selectedGender = useSelector((state) => state.gender);
+  const dispatch = useDispatch();
+
+const handleGenderClick = (gender) => {
+    dispatch(setSelectedGender(gender));
+  };
 
 const [menuOpen , setMenuOpen] = useState(false)
 
@@ -48,17 +57,12 @@ const cartToggle = () =>{
             <KeyboardArrowDown />
           </div>
 
-          <div className="item">
-            <Link to='/products/1' className='link'>Women</Link>
-          </div>
-
-          <div className="item">
-            <Link to='/products/2' className='link'>Men</Link>
-          </div>
-
-          <div className="item">
-            <Link to='/products/3' className='link'>Children</Link>
-          </div>
+           <div className="item">
+              <Link to='/products/1' className={`link ${selectedGender === 'female' ? 'active' : ''}`} onClick={() => handleGenderClick('female')}>Women</Link>
+           </div>
+           <div className="item">
+              <Link to='/products/2' className={`link ${selectedGender === 'male' ? 'active' : ''}`} onClick={() => handleGenderClick('male')}>Men</Link>
+           </div>
 
         </div>
 
