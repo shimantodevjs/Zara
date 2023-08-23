@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import { KeyboardArrowDown,
          Search,
          PersonOutline,
@@ -15,13 +15,17 @@ import {setSelectedGender} from '../../Redux/genderSlice'
 
 const Navbar = () => {
 
+//setting redux
+const cartItems= useSelector(state=>state.cart)
 const selectedGender = useSelector((state) => state.gender);
-  const dispatch = useDispatch();
+const dispatch = useDispatch();
 
+//setting men and women section in navbar
 const handleGenderClick = (gender) => {
     dispatch(setSelectedGender(gender));
   };
 
+//setting useState for hamburger menu and cart
 const [menuOpen , setMenuOpen] = useState(false)
 
 const [cartOpen , setCartOpen] = useState(false)
@@ -33,6 +37,9 @@ const menuToggle = () => {
 const cartToggle = () =>{
   setCartOpen(!cartOpen)
 }
+
+
+
 
   return (
     <div className='navbar'>
@@ -77,7 +84,7 @@ const cartToggle = () =>{
              <FavoriteBorder />
              <div className="cart" onClick={cartToggle}>
               <ShoppingCartOutlined />
-              <span>2</span>
+              <span>{cartItems.length}</span>
              </div>
            </div>
         </div>

@@ -6,7 +6,7 @@ const data=[
       title:'Shirt & Top',
       isNew:true,
       oldPrice:'4500 ₽',
-      price:'3999 ₽',
+      price:3999,
       gender:"female"
      },
      {
@@ -16,7 +16,7 @@ const data=[
       title:'Teal Suit',
       isNew:true,
       oldPrice:'14,000 ₽',
-      price:'9999 ₽',
+      price:9999,
       gender:'female'
      },
      {
@@ -26,7 +26,7 @@ const data=[
       title:"Khaki Overcoat",
       isNew:false,
       oldPrice:'6999 ₽',
-      price:'4999 ₽',
+      price:4999 ,
       gender:'male'
      },
      {
@@ -36,7 +36,7 @@ const data=[
       title:"Red Jacket",
       isNew:false,
       oldPrice:'7000 ₽',
-      price:'6599 ₽',
+      price:6599,
       gender:'female'
      },
      {
@@ -46,7 +46,7 @@ const data=[
       title:"White Shirt",
       isNew:false,
       oldPrice:'2900 ₽',
-      price:'1999 ₽',
+      price:1999 ,
       gender:'male'
      },
      {
@@ -56,7 +56,7 @@ const data=[
       title:"Black Suit",
       isNew:true,
       oldPrice:'4700 ₽',
-      price:'4100 ₽',
+      price:4100,
       gender:'male'
      },
      {
@@ -66,7 +66,7 @@ const data=[
       title:"Leather Jacket",
       isNew:true,
       oldPrice:'15,999 ₽',
-      price:'12,999 ₽',
+      price:12999 ,
       gender:'male'
      },
      {
@@ -76,7 +76,7 @@ const data=[
       title:"Yellow Sweater",
       isNew:false,
       oldPrice:'2700 ₽',
-      price:'2100 ₽',
+      price:2100 ,
       gender:'female'
      },
 

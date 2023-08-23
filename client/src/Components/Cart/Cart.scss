@@ -4,7 +4,7 @@
     top: 40px;
     z-index: 999;
     background-color: #fff;
-    padding: 40px;
+    padding: 30px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
@@ -75,5 +75,22 @@
         color:red;
         font-size: 12px;
         cursor: pointer;
+    }
+
+    @media (max-width:767px){
+        h1 {
+                font-weight: 400;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        .item{
+            gap: 20px;
+
+            img {
+                    height: 80px;
+                    width: 60px;
+                    object-fit: cover;
+                }
+            }
     }
 }

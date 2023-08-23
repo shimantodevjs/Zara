@@ -14,7 +14,7 @@ const Card = ({item}) => {
       <h2>{item.title}</h2>
       <div className="prices">
         <div className="oldPrice">{item.oldPrice}</div>
-        <div className="price">{item.price}</div>
+        <div className="price">{item.price} ₽</div>
       </div>
     </div>
     </Link>

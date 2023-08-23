@@ -1,11 +1,25 @@
 import './SingleProduct.scss'
 import React, { useState } from 'react'
 import {AddShoppingCart , FavoriteBorder , Balance} from '@mui/icons-material'
+import { useDispatch } from 'react-redux'
+import { addItemToCart } from '../../Redux/cartSlice'
 
 
 const SingleProduct = ({ product }) => {
 
- 
+  const dispatch= useDispatch()
+
+   const handleAddToCart = () => {
+    const cartItem = {
+      id: product.id,
+      title: product.title,
+      img: product.img,
+      price: product.price,
+      quantity,
+    };
+
+    dispatch(addItemToCart(cartItem));
+  };
   
   const[selectedImg ,setSelectedImg]= useState(0)
 
@@ -28,7 +42,7 @@ const SingleProduct = ({ product }) => {
 
       <div className="right">
            <h1>{product.title}</h1>
-           <span className='price' >{product.price}</span>
+           <span className='price' >{product.price} ₽</span>
            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel harum assumenda deserunt voluptate inventore, ea ullam fuga perferendis et ratione.</p>
 
            <div className="quantity">
@@ -46,7 +60,7 @@ const SingleProduct = ({ product }) => {
             >+</button>
            </div>
 
-           <button className="addCart">
+           <button className="addCart" onClick={()=>dispatch(handleAddToCart)}>
             <AddShoppingCart /> ADD TO CART
            </button>
 
