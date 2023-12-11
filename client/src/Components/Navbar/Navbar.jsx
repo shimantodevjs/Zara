@@ -90,7 +90,7 @@ const cartToggle = () =>{
         </div>
 
        </div>
-       {cartOpen && <Cart />}
+       {cartOpen && <Cart cartToggle={cartToggle} />}
 
        </div>
   )

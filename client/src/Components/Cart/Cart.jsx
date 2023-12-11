@@ -1,10 +1,10 @@
 import React from 'react'
 import './Cart.scss'
-import { DeleteOutlined } from '@mui/icons-material'
+import { DeleteOutlined , Clear } from '@mui/icons-material'
 import { useDispatch, useSelector} from 'react-redux'
 import { removeItemFromCart,resetCart } from '../../Redux/cartSlice'
 
-const Cart = () => {
+const Cart = ({ cartToggle }) => {
   const cartItems= useSelector(state=>state.cart)
   const dispatch= useDispatch()
 
@@ -25,7 +25,10 @@ const Cart = () => {
 
   return (
     <div className='cartContainer'>
-       <h1>Products in your cart</h1>
+      <h1>Cart</h1>
+      <div className="top">
+       <Clear onClick={cartToggle} />
+       </div>
        {cartItems?.map(item=>(
          <div className="item" key={item.id}>
                <img src={item.img} alt="" />
