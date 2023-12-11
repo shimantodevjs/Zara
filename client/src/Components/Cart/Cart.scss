@@ -1,115 +1,138 @@
-.cartContainer{
+.cartContainer {
     position: absolute;
     right: 0px;
     top: 0px;
     position: fixed;
     width: 25%;
-    height: 100vh;
+    height: 100%;
+    overflow: auto;
     z-index: 999;
     background-color: #fff;
     padding: 30px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    
+        scrollbar-width: thin;
+            /* Firefox */
+            scrollbar-color: transparent transparent;
+            /* Firefox */
+        
+            &::-webkit-scrollbar {
+                width: 4px;
+                /* Width of the scrollbar */
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                background-color: transparent;
+                /* Color of the scrollbar thumb */
+            }
+        
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+                /* Color of the scrollbar track */
+            }
 
-    .top{
+    .top {
         position: absolute;
-        top:15px;
+        top: 15px;
         right: 15px;
         z-index: 9999;
         color: red;
         cursor: pointer;
     }
 
-    h1{
+    h1 {
         font-weight: 400;
         font-size: 24px;
         color: gray;
         margin-bottom: 30px;
     }
 
-    .item{
+    .item {
         display: flex;
         align-items: center;
         justify-content: space-around;
         margin-bottom: 30px;
-        img{
+
+        img {
             height: 70px;
-            width: 50px; 
+            width: 50px;
         }
 
-        .details{
-            h1{
+        .details {
+            h1 {
                 font-size: 14px;
                 font-weight: 500;
             }
 
-            .price{
+            .price {
                 color: #2879fe;
                 margin-top: -10px;
             }
         }
 
-        .delete{
+        .delete {
             color: red;
             font-size: 30px;
             cursor: pointer;
         }
     }
 
-    .total{
+    .total {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
         font-weight: 500;
         font-size: 18px;
 
-        .priceTotal{
+        .priceTotal {
             color: #2879fe;
         }
     }
 
-    button{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 200px;
-            padding: 10px;
-            background-color: #2879fe;
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 20px;
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 200px;
+        padding: 10px;
+        background-color: #2879fe;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 20px;
     }
 
-    .reset{
-        color:red;
+    .reset {
+        color: red;
         font-size: 12px;
         cursor: pointer;
     }
 
-    @media (max-width: 1023px){
+    @media (max-width: 1023px) {
 
         width: 40%;
     }
 
-    @media (max-width:767px){
-           
-           width: 100%;
+    @media (max-width:767px) {
+
+        width: 100%;
 
         h1 {
-                font-weight: 400;
-                font-size: 20px;
-                margin-bottom: 20px;
-            }
-        .item{
+            font-weight: 400;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .item {
             gap: 20px;
 
             img {
-                    height: 80px;
-                    width: 60px;
-                    object-fit: cover;
-                }
+                height: 80px;
+                width: 60px;
+                object-fit: cover;
             }
+        }
     }
 }
